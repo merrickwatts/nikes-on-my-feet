@@ -24,6 +24,10 @@ const shoeSchema = new Schema({
     type: String,
     required: true,
   },
+  gender: {
+    type: String,
+    required: true,
+  },
 });
 
 const Shoe = model("Review", shoeSchema);
