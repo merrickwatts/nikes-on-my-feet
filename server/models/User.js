@@ -26,16 +26,12 @@ const userSchema = new Schema(
         ref: "Review",
       },
     ],
-    user_size: [
-      {
-        type: Integer,
-      },
-    ],
-    user_gender: [
-      {
-        type: String,
-      },
-    ],
+    user_size: {
+      type: Integer,
+    },
+    user_gender: {
+      type: String,
+    },
   },
   {
     toJSON: {
