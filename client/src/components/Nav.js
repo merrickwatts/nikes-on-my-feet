@@ -3,7 +3,7 @@ import React from 'react';
 function Nav({ currentPage, handlePageChange }) {
     return (
         <ul className='nav'>
-            {/* add check to see if user is logged in if logged in display logout otherwise display login */}
+            {/* add check to see if user is logged in and if logged in display logout else display login */}
             <li>
                 <button href='#login'
                 onClick={(handlePageChange('Login'))}
