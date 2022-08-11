@@ -25,3 +25,4 @@ function Nav({ currentPage, handlePageChange }) {
         </ul>
     )
 }
+export default Nav

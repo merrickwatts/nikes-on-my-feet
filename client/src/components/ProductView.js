@@ -34,3 +34,4 @@ function ProductView({ currentPage, handlePageChange }) {
     </div>
   );
 }
+export default ProductView;
