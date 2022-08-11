@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Nav from './Nav';
 import Home from './pages/Home';
-import About from './pages/About';
 import ProductView from './ProductView';
 
 export default function PortfolioContainer() {
@@ -15,10 +14,6 @@ export default function PortfolioContainer() {
     if (currentPage === 'ProductView') {
       return <ProductView />;
     }
-    if (currentPage === 'Blog') {
-      return <Blog />;
-    }
-    return <Contact />;
   };
 
   const handlePageChange = (page) => setCurrentPage(page);
