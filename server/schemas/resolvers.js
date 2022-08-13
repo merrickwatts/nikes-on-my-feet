@@ -21,6 +21,9 @@ const resolvers = {
     user: async (parent, { username }) => {
       return User.findOne({ username }).select("-__v -password");
     },
+    shoes: async () => {
+      return Shoe.find();
+    },
   },
 
   Mutation: {

@@ -10,6 +10,8 @@ const PORT = process.env.PORT || 3001;
 const server = new ApolloServer({
   typeDefs,
   resolvers,
+  // !enables fake response from the server for testing! +++++++++++
+  mocks: true,
   context: authMiddleware,
 });
 
@@ -24,7 +26,8 @@ if (process.env.NODE_ENV === "production") {
 }
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../client/build/index.html"));
+  //res.sendFile(path.join(__dirname, "../client/build/index.html"));
+  res.send("OK!: " + req.body);
 });
 
 // Create a new instance of an Apollo server with the GraphQL schema
