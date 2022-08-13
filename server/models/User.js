@@ -27,7 +27,7 @@ const userSchema = new Schema(
       },
     ],
     user_size: {
-      type: Integer,
+      type: String,
     },
     user_gender: {
       type: String,
