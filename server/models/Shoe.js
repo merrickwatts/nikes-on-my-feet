@@ -8,7 +8,7 @@ const shoeSchema = new Schema({
     unique: true,
   },
   price: {
-    type: Integer,
+    type: String,
     required: true,
   },
   shoe_description: {
@@ -17,7 +17,7 @@ const shoeSchema = new Schema({
     maxlength: 500,
   },
   shoe_size: {
-    type: Integer,
+    type: String,
     required: true,
   },
   photo_ref: {
@@ -30,6 +30,6 @@ const shoeSchema = new Schema({
   },
 });
 
-const Shoe = model("Review", shoeSchema);
+const Shoe = model("Shoe", shoeSchema);
 
 module.exports = Shoe;
