@@ -99,6 +99,11 @@
 
       
 
+  "apollo-server": "^3.10.1",
+    
+
+      
+
   "apollo-server-express": "^3.10.1",
     
 
@@ -115,6 +120,11 @@
       
 
   "framer-motion": "^6.5.1",
+    
+
+      
+
+  "graphql": "^16.5.0",
     
 
       
