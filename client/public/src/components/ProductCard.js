@@ -9,6 +9,7 @@ export default function ProductCard(props) {
           <h5 className="card-title">Name: {props.name}</h5>
           <p className="card-text">Description: {props.description}</p>
           <p className="card-text">Size: {props.size}</p>
+          <p className="review-text">{props.review}</p>
         </div>
       </div>
     </div>
