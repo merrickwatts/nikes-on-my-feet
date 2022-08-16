@@ -26,6 +26,7 @@ const userSchema = new Schema(
         ref: 'Review',
       },
     ],
+    // need a property like reviews that is an array to take in a shoe that a user wants to buy
     user_size: {
       type: String,
     },

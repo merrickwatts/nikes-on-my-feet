@@ -1,6 +1,9 @@
-const { AuthenticationError } = require('apollo-server-express');
-const { User, Review, Shoe } = require('../models');
-const { signToken } = require('../utils/auth');
+
+const { AuthenticationError } = require("apollo-server-express");
+const { User, Review, Shoe } = require("../models");
+const { signToken } = require("../utils/auth");
+const stripe = require('stripe')('pk_test_51LUhHjBI8BK3kUvgExFVe8XzCnsEdxlrAC4rCjIRym30NqJoVSRgHelZBSJBUUOmmEz4tjeSg93YwXATEPx6gy5w007u5LQju7');
+
 
 const resolvers = {
   Query: {
@@ -24,6 +27,8 @@ const resolvers = {
     shoes: async () => {
       return Shoe.find();
     },
+    // query payment that sites user by user id and populates their shoe array and then calls stripe.shoeArray.create and
+    //add shoe by shoename and price 
   },
 
   Mutation: {
@@ -49,6 +54,9 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
+  
+    // add product mutation that finds user by context.user._id and pushes an item by it's id to their shoe array.
+    // remove product mutation that finds a user by contex.user._id and pulls an item by it's id by their shoe array.
   },
 };
 

@@ -43,5 +43,5 @@ const typeDefs = gql`
     addUser(username: String!, email: String!, password: String!): Auth
   }
 `;
-
+// once resolvers are created need to add them to type query and type mutation objects.
 module.exports = typeDefs;
