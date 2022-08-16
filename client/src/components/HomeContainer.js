@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Nav from './Nav';
+import NavTabs from './NavTabs';
 import Home from './pages/Home';
-import ProductView from './ProductView';
+//import ProductView from './ProductView';
 
 export default function HomeContainer() {
   const [currentPage, setCurrentPage] = useState('Home');

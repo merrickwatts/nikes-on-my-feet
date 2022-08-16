@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import * as React from 'react';
 
 // 1. import `ChakraProvider` component
 import { extendTheme, ChakraProvider } from '@chakra-ui/react';
@@ -25,7 +24,7 @@ const colors = {
 
 const theme = extendTheme({ colors });
 
-function App() {
+function ChakraApp() {
   // 2. Wrap ChakraProvider at the root of your app
   return (
     <ChakraProvider theme={theme}>
@@ -37,7 +36,7 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <ChakraApp />
   </React.StrictMode>
 );
 

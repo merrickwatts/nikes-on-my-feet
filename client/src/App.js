@@ -6,6 +6,7 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
+import HomeContainer from './components/HomeContainer'
 
 //for auth
 const httpLink = createHttpLink({
@@ -27,26 +28,13 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-const App = () => <HomeContainer />;
 
 function App() {
   return (
     <ApolloProvider client={client}>
       <div className='App'>
-        <header className='App-header'>
-          <img src={logo} className='App-logo' alt='logo' />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className='App-link'
-            href='https://reactjs.org'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            Learn React
-          </a>
-        </header>
+            <HomeContainer />
+          
       </div>
     </ApolloProvider>
   );
