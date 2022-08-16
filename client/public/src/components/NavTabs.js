@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Nav({ currentPage, handlePageChange }) {
+function NavTabs({ currentPage, handlePageChange }) {
     return (
         <ul className='nav'>
             {/* add check to see if user is logged in and if logged in display logout else display login */}
@@ -25,4 +25,4 @@ function Nav({ currentPage, handlePageChange }) {
         </ul>
     )
 }
-export default Nav
+export default NavTabs
