@@ -22,6 +22,8 @@ const resolvers = {
     user: async (parent, { username }) => {
       return User.findOne({ username }).select("-__v -password");
     },
+    // query payment that sites user by user id and populates their shoe array and then calls stripe.shoeArray.create and
+    //add shoe by shoename and price 
   },
 
   Mutation: {
@@ -47,6 +49,9 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
+  
+    // add product mutation that finds user by context.user._id and pushes an item by it's id to their shoe array.
+    // remove product mutation that finds a user by contex.user._id and pulls an item by it's id by their shoe array.
   },
 };
 
