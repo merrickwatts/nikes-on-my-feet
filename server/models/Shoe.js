@@ -1,5 +1,5 @@
-const { Schema, model } = require("mongoose");
-const dateFormat = require("../utils/dateFormat");
+const { Schema, model } = require('mongoose');
+const dateFormat = require('../utils/dateFormat');
 
 const shoeSchema = new Schema({
   shoe_name: {
@@ -30,6 +30,6 @@ const shoeSchema = new Schema({
   },
 });
 
-const Shoe = model("Shoe", shoeSchema);
+const Shoe = model('Shoe', shoeSchema);
 
 module.exports = Shoe;
