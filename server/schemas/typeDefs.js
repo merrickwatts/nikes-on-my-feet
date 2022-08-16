@@ -36,5 +36,5 @@ const typeDefs = gql`
     addFriend(friendId: ID!): User
   }
 `;
-
+// once resolvers are created need to add them to type query and type mutation objects.
 module.exports = typeDefs;
