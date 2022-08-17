@@ -16,9 +16,16 @@ const Header = () => {
       <div className="container flex-row justify-space-between-lg justify-center align-center">
         <Link to="/">
           <h1>Nikes On My Feet</h1>
-
-          <NavTabs />
         </Link>
+        {Auth.loggedIn() ? (
+          <>
+            <a href="/" onClick={logout}>
+              Logout
+            </a>
+          </>
+        ) : (
+          <NavTabs />
+        )}
       </div>
     </header>
   );
