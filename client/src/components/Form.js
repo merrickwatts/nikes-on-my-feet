@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import '../../src/assets/stylesheets/style.css';
 
 // Here we import a helper function that will check if the email is valid
 import { checkPassword, validateEmail } from '../utils/helpers';
@@ -55,34 +55,36 @@ function Form() {
 
   return (
     <div>
-      <p>Hello {userName}</p>
-      <form className="form">
+      <p>Sign in to your account</p>
+      <form className='form'>
         <input
           value={email}
-          name="email"
+          name='email'
           onChange={handleInputChange}
-          type="email"
-          placeholder="email"
+          type='email'
+          placeholder='email'
         />
         <input
           value={userName}
-          name="userName"
+          name='userName'
           onChange={handleInputChange}
-          type="text"
-          placeholder="username"
+          type='text'
+          placeholder='username'
         />
         <input
           value={password}
-          name="password"
+          name='password'
           onChange={handleInputChange}
-          type="password"
-          placeholder="Password"
+          type='password'
+          placeholder='Password'
         />
-        <button type="button" onClick={handleFormSubmit}>Submit</button>
+        <button type='button' onClick={handleFormSubmit}>
+          Submit
+        </button>
       </form>
       {errorMessage && (
         <div>
-          <p className="error-text">{errorMessage}</p>
+          <p className='error-text'>{errorMessage}</p>
         </div>
       )}
     </div>
