@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
+
+import Auth from "../utils/auth";
 
 export default function ShoeCard(props) {
+  const [reviewActive, setReviewActive] = useState(false);
+
+  const handleReviewButton = () => {
+    setReviewActive(true);
+  };
+
   return (
     <div className="card">
       <div className="card-header">
@@ -15,6 +23,17 @@ export default function ShoeCard(props) {
           <p>Size: {props.shoeSize}</p>
           <p>{props.gender}</p>
           <h3>Price: {props.shoePrice}</h3>
+          {Auth.loggedIn() && !reviewActive ? (
+            <button onClick={handleReviewButton}>leave review</button>
+          ) : (
+            <p></p>
+          )}
+          {reviewActive == true && (
+            <div>
+              <textarea />
+              <button>Submit</button>
+            </div>
+          )}
         </div>
       </div>
     </div>
