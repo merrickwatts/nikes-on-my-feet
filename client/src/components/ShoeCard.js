@@ -2,8 +2,40 @@ import React, { useState } from "react";
 
 import Auth from "../utils/auth";
 
+import { useMutation } from "@apollo/client";
+import { ADD_REVIEW } from "../utils/mutations";
+
 export default function ShoeCard(props) {
   const [reviewActive, setReviewActive] = useState(false);
+  const [reviewBody, setBody] = useState("");
+  const [characterCount, setCharacterCount] = useState(0);
+
+  let shoeID = props.shoeId;
+
+  const [addReview, { error }] = useMutation(ADD_REVIEW);
+
+  const handleChange = (event) => {
+    if (event.target.value.length <= 280) {
+      setBody(event.target.value);
+      setCharacterCount(event.target.value.length);
+    }
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+      await addReview({
+        variables: { reviewBody, shoeID },
+      });
+
+      // clear form value
+      setBody("");
+      setCharacterCount(0);
+    } catch (e) {
+      console.error(e);
+    }
+  };
 
   const handleReviewButton = () => {
     setReviewActive(true);
@@ -30,8 +62,8 @@ export default function ShoeCard(props) {
           )}
           {reviewActive == true && (
             <div>
-              <textarea />
-              <button>Submit</button>
+              <textarea placeholder="Leave a review about this shoe" />
+              <button onClick={handleSubmit}>Submit</button>
             </div>
           )}
         </div>

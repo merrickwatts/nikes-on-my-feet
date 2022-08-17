@@ -8,21 +8,21 @@ const typeDefs = gql`
   }
 
   type Shoe {
+    _id: ID
     shoe_name: String
     price: String
     shoe_description: String
     shoe_size: String
     photo_ref: String
     gender: String
+    reviews: [Review]
   }
 
   type Review {
     _id: ID
-    reviewText: String
+    reviewBody: String
     createdAt: String
     username: String
-    user_id: String
-    product_id: String
   }
 
   type Auth {
@@ -41,6 +41,7 @@ const typeDefs = gql`
   type Mutation {
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
+    addReview(shoeId: ID!, reviewBody: String!): Shoe
   }
 `;
 // once resolvers are created need to add them to type query and type mutation objects.

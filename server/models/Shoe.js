@@ -1,5 +1,6 @@
 const { Schema, model } = require("mongoose");
 const dateFormat = require("../utils/dateFormat");
+const reviewSchema = require("./Review");
 
 const shoeSchema = new Schema({
   shoe_name: {
@@ -28,6 +29,7 @@ const shoeSchema = new Schema({
     type: String,
     required: true,
   },
+  reviews: [reviewSchema],
 });
 
 const Shoe = model("Shoe", shoeSchema);

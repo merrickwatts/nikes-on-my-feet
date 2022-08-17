@@ -15,6 +15,7 @@ export default function Home() {
       {shoes.map((e) => {
         return (
           <ShoeCard
+            shoeId={e.shoe_id}
             shoeName={e.shoe_name}
             shoePrice={e.price}
             shoeDisc={e.shoe_description}
