@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+.background {
+  background-image: url('./assets/images/nikes-on-my-feet.png')
+}
