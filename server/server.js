@@ -11,7 +11,6 @@ const server = new ApolloServer({
   typeDefs,
   resolvers,
   // !enables fake response from the server for testing! +++++++++++
-  mocks: true,
   context: authMiddleware,
 });
 
