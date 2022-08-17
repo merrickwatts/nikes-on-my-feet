@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import NavTabs from './NavTabs';
 import Home from './pages/Home';
+import Login from './pages/Login';
+
 //import ProductView from './ProductView';
 
 export default function HomeContainer() {
