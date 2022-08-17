@@ -1,0 +1,74 @@
+[
+    { 
+        "username" : "Molly48", 
+        "email" : "Molly48_Waters59@hotmail.com", 
+        "password" : "kGjRfUNWUIRwfS_", 
+        "reviews" : [], 
+        "user_size" :  10,
+        "user_gender" : "w"
+    },
+    { 
+        "username" : "Katlyn85", 
+        "email" : "Katlyn8550@gmail.com", 
+        "password" : "otK5YtXpcalD1cm", 
+        "reviews" : [], 
+        "user_size" : 11,
+        "user_gender" : "w"
+    },
+    { 
+        "username" : "Lessie_Kautzer61", 
+        "email" : "Lessie_Kautzer61_Walker81@hotmail.com", 
+        "password" : "AP3EUTRZoxzsiHn", 
+        "reviews" : [], 
+        "user_size" : 10,
+        "user_gender" : "w"
+    },
+    { 
+        "username" : "Elton_Heaney", 
+        "email" : "Elton_Heaney.Kemmer6@yahoo.com", 
+        "password" : "3dVgRgSQmrGLaQE", 
+        "reviews" : [], 
+        "user_size" : 9,
+        "user_gender" : "m"
+    },
+    { 
+        "username" : "Josue67", 
+        "email" : "Josue6785@yahoo.com", 
+        "password" : "BNsmR75BHDH4na3", 
+        "reviews" : [], 
+        "user_size" : 8,
+        "user_gender" : "m"
+    },
+    { 
+        "username" : "Jaron98", 
+        "email" : "Jaron98_Will72@hotmail.com", 
+        "password" : "vNVT_y10PBpVaUV", 
+        "reviews" : [], 
+        "user_size" : 10,
+        "user_gender" : "m" 
+    },
+    { 
+        "username" : "Colt.Windler", 
+        "email" : "Colt.Windler_Corwin@hotmail.com", 
+        "password" : "bBDsrGqpDHI1YTa", 
+        "reviews" : [], 
+        "user_size" : 13,
+        "user_gender" : "m" 
+    },
+    { 
+        "username" : "Berta.Schmeler15", 
+        "email" : "Berta.Schmeler15_Hackett93@hotmail.com", 
+        "password" : "_cbdQwR8Vjn4wBk", 
+        "reviews" : [], 
+        "user_size" : 9,
+        "user_gender" : "w"
+    },
+    { 
+        "username" : "Kaley35", 
+        "email" : "Kaley35_Carroll@yahoo.com", 
+        "password" : "OodrBk3d1t5Ddhb", 
+        "reviews" : [], 
+        "user_size" : 7,
+        "user_gender" : "w"
+    }
+]

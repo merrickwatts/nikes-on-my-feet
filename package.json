@@ -1,158 +1,9 @@
 {
-
-    
-
   "name": "nikes-on-my-feet",
-    
-
-  "version": "1.0.0",
-    
-
-  "main": "server/server.js",
-    
-
-  "scripts": {
-    
-
-      
-
-  "start": "node server/server.js",
-    
-
-      
-
-  "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
-    
-
-      
-
-  "install": "cd server && npm i && cd ../client && npm i",
-    
-
-      
-
-  "seed": "cd server && npm run seed",
-    
-
-      
-
-  "build": "cd client && npm run build"
-    
-
-  },
-    
-
-  "keywords": [],
-    
-
-  "author": "",
-    
-
   "license": "ISC",
-    
-
-  "devDependencies": {
-    
-
-      
-
-  "concurrently": "^5.1.0"
-    
-
-  },
-    
-
   "description": "",
-    
-
-  "dependencies": {
-    
-
-      
-
-  "@apollo/client": "^3.6.9",
-    
-
-      
-
-  "@chakra-ui/icons": "^2.0.6",
-    
-
-      
-
-  "@chakra-ui/react": "^2.2.8",
-    
-
-      
-
-  "@chakra-ui/theme-tools": "^2.0.7",
-    
-
-      
-
-  "@emotion/react": "^11.10.0",
-    
-
-      
-
-  "@emotion/styled": "^11.10.0",
-    
-
-      
-
-  "apollo-server": "^3.10.1",
-    
-
-      
-
-  "apollo-server-express": "^3.10.1",
-    
-
-      
-
-  "bcrypt": "^5.0.1",
-    
-
-      
-
-  "express": "^4.18.1",
-    
-
-      
-
-  "framer-motion": "^4.1.17",
-    
-
-      
-
-  "graphql": "^16.5.0",
-    
-
-      
-
-  "jsonwebtoken": "^8.5.1",
-    
-
-      
-
-  "mongoose": "^6.5.2",
-    
-
-      
-
-  "nodemon": "^2.0.19",
-    
-
-      
-
-  "react-icons": "^4.4.0"
-    
-
-  },
-  "name": "server",
   "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "main": "server/server.js",
   "scripts": {
     "start": "node server/server.js",
     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
@@ -162,7 +13,6 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
   "devDependencies": {
     "concurrently": "^5.1.0"
   }
