@@ -11,6 +11,9 @@ export default function HomeContainer() {
     if (currentPage === 'Home') {
       return <Home />;
     }
+    if (currentPage === 'Login') {
+      return <Login />;
+    }
     if (currentPage === 'ProductView') {
       return <ProductView />;
     }
