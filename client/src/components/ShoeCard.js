@@ -10,9 +10,9 @@ export default function ShoeCard(props) {
   const [reviewBody, setBody] = useState("");
   const [characterCount, setCharacterCount] = useState(0);
 
-  let shoeID = props.shoeId;
-
   const [addReview, { error }] = useMutation(ADD_REVIEW);
+
+  let shoeId = props.shoeId;
 
   const handleChange = (event) => {
     if (event.target.value.length <= 280) {
@@ -20,18 +20,20 @@ export default function ShoeCard(props) {
       setCharacterCount(event.target.value.length);
     }
   };
-
+  console.log("body: " + reviewBody, "ID: " + shoeId);
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     try {
       await addReview({
-        variables: { reviewBody, shoeID },
+        variables: { reviewBody, shoeId },
       });
 
       // clear form value
       setBody("");
+      setReviewActive(false);
       setCharacterCount(0);
+      window.location.reload();
     } catch (e) {
       console.error(e);
     }
@@ -56,18 +58,33 @@ export default function ShoeCard(props) {
           <p>{props.gender}</p>
           <h3>Price: {props.shoePrice}</h3>
           {Auth.loggedIn() && !reviewActive ? (
-            <button onClick={handleReviewButton}>leave review</button>
+            <button className="btn" onClick={handleReviewButton}>
+              leave review
+            </button>
           ) : (
             <p></p>
           )}
           {reviewActive == true && (
-            <div>
-              <textarea placeholder="Leave a review about this shoe" />
-              <button onClick={handleSubmit}>Submit</button>
+            <div className="flex-row">
+              <textarea
+                placeholder="Leave a review about this shoe"
+                value={reviewBody}
+                onChange={handleChange}
+              />
+              <button className="btn ml-3" onClick={handleSubmit}>
+                Submit
+              </button>
             </div>
           )}
         </div>
       </div>
+      {props.review[0] !== undefined ? (
+        <div className="ml-4">
+          <p>Other people are saying: {props.review[0].reviewBody}</p>
+        </div>
+      ) : (
+        <p></p>
+      )}
     </div>
   );
 }

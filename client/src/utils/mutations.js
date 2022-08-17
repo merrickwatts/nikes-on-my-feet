@@ -25,10 +25,11 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_REVIEW = gql`
-  mutation Mutation($shoeId: ID!, $reviewBody: String!) {
+  mutation addReview($shoeId: ID!, $reviewBody: String!) {
     addReview(shoeId: $shoeId, reviewBody: $reviewBody) {
-      _id
-      reviewBody
+      reviews {
+        _id
+      }
     }
   }
 `;
