@@ -13,15 +13,17 @@ export default function Home() {
   return (
     <main>
       {shoes.map((e) => {
+        console.log(e);
         return (
           <ShoeCard
-            shoeId={e.shoe_id}
+            shoeId={e._id}
             shoeName={e.shoe_name}
             shoePrice={e.price}
             shoeDisc={e.shoe_description}
             shoeSize={e.shoe_size}
             photo={e.photo_ref}
             gender={e.gender}
+            review={e.reviews}
           />
         );
       })}

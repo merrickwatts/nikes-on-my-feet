@@ -4,12 +4,18 @@ import { gql } from "@apollo/client";
 export const QUERY_SHOES = gql`
   query Query {
     shoes {
+      _id
       shoe_name
       price
       shoe_description
       shoe_size
       photo_ref
       gender
+      reviews {
+        _id
+        reviewBody
+        username
+      }
     }
   }
 `;

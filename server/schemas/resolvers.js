@@ -25,7 +25,7 @@ const resolvers = {
       return User.findOne({ username }).select("-__v -password");
     },
     shoes: async () => {
-      return Shoe.find();
+      return Shoe.find().populate("reviews");
     },
     // query payment that sites user by user id and populates their shoe array and then calls stripe.shoeArray.create and
     //add shoe by shoename and price
@@ -55,13 +55,11 @@ const resolvers = {
       return { token, user };
     },
     addReview: async (parent, { shoeId, reviewBody }, context) => {
-      if (true) {
+      if (context.user) {
         const updatedShoe = await Shoe.findOneAndUpdate(
           { _id: shoeId },
           {
-            $push: {
-              review: { reviewBody },
-            },
+            $push: { reviews: { reviewBody, username: context.user.username } },
           },
           { new: true, runValidators: true }
         );
