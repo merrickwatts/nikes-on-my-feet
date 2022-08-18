@@ -43,6 +43,12 @@ export default function ShoeCard(props) {
     setReviewActive(true);
   };
 
+  let randomReview = Math.floor(Math.random() * props.review.length);
+
+  function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
   return (
     <div className="card">
       <div className="card-header">
@@ -55,11 +61,11 @@ export default function ShoeCard(props) {
         <div className="card-info-holder col-12 col-lg-8">
           <p>{props.shoeDisc}</p>
           <p>Size: {props.shoeSize}</p>
-          <p>{props.gender}</p>
-          <h3>Price: {props.shoePrice}</h3>
+          <p>{capitalizeFirstLetter(props.gender)}</p>
+          <h3>Price: ${props.shoePrice}</h3>
           {Auth.loggedIn() && !reviewActive ? (
             <button className="btn" onClick={handleReviewButton}>
-              leave review
+              Leave Review
             </button>
           ) : (
             <p></p>
@@ -80,7 +86,10 @@ export default function ShoeCard(props) {
       </div>
       {props.review[0] !== undefined ? (
         <div className="ml-4">
-          <p>Other people are saying: {props.review[0].reviewBody}</p>
+          <p>
+            {props.review[randomReview].username} said:{" "}
+            {props.review[randomReview].reviewBody}
+          </p>
         </div>
       ) : (
         <p></p>

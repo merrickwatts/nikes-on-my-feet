@@ -14,6 +14,7 @@ export const QUERY_SHOES = gql`
       reviews {
         _id
         reviewBody
+        username
       }
     }
   }

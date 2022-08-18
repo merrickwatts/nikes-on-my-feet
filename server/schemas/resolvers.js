@@ -59,7 +59,7 @@ const resolvers = {
         const updatedShoe = await Shoe.findOneAndUpdate(
           { _id: shoeId },
           {
-            $push: { reviews: { reviewBody } },
+            $push: { reviews: { reviewBody, username: context.user.username } },
           },
           { new: true, runValidators: true }
         );
